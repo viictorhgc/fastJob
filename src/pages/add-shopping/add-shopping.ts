@@ -27,7 +27,10 @@ export class AddShoppingPage {
       this.shoppingItemRef$.push({
         itemName: this.shoppingItem.itemName,
         itemNumber: Number(this.shoppingItem.itemNumber)
+
       });
+      this.navCtrl.pop();
+
   }
 
 }
