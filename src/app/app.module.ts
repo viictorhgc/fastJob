@@ -10,6 +10,7 @@ import { ShoppingListPage } from '../pages/shopping-list/shopping-list';
 import { FIREBASE_CREDENTIALS } from './firebase.credentials'
 import { AddShoppingPage } from '../pages/add-shopping/add-shopping'
 import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-item';
+import { AngularFireAuthModule } from "angularfire2/auth";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
