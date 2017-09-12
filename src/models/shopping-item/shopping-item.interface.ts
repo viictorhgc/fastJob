@@ -1,5 +1,6 @@
 export interface ShoppingItem {
   $key?: string,
-  itemName: string;
-  itemNumber: number;
+  nomeServico: string;
+  valorServico: number;
+  dataServico: Date;
 }

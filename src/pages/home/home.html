@@ -3,14 +3,17 @@
 
   <ion-navbar color = "primary">
     <ion-title>Serviços</ion-title>
+    <ion-menu [content]="mycontent" > Teste </ion-menu>
+    <ion-nav #mycontent [root]="AddShoppingPage"></ion-nav>
 
-    <ion-buttons>
-      <button ion-button menuToggle>Toggle Menu</button>
-
+    <ion-buttons start>
+      <button ion-button icon-only menuClose (click) = "openMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </button>
     </ion-buttons>
+
+
     <ion-buttons end>
-
-
 
       <button ion-button icon-only (click) ="navigateToAddShoppingPage()">
         <ion-icon name="add"></ion-icon>
@@ -28,8 +31,10 @@
 <ion-content padding>
   <ion-list>
     <ion-item *ngFor = "let item of shoppingListRef$ | async" (click) = "selectShoppingItem(item)">
-      <h2> Item Name: {{item.itemName}} </h2>
-      <h2> Number Item: {{item.itemNumber}}</h2>
+
+      <h2> <b> Serviço : </b> {{item.nomeServico}} </h2>
+      <h2> Valor : {{item.valorServico}}</h2>
+      <h2> Data : {{item.dataServico | date: 'dd/MM/yyyy'}}  </h2>
     </ion-item>
 
   </ion-list>

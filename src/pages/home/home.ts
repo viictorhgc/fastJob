@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ActionSheetController, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, ActionSheetController, NavController, NavParams, ToastController, MenuController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 import { ShoppingItem } from '../../models/shopping-item/shopping-item.interface';
@@ -20,17 +20,18 @@ export class HomePage {
      public navCtrl: NavController,
       public navParams: NavParams,
     private database: AngularFireDatabase,
-  private actionSheetCtrl: ActionSheetController) {
+  private actionSheetCtrl: ActionSheetController,
+    public menuCtrl : MenuController) {
 
       this.shoppingListRef$ = this.database.list('shopping-list');
 
   }
   selectShoppingItem(shoppingItem: ShoppingItem){
     this.actionSheetCtrl.create({
-      title: `${shoppingItem.itemName}`,
+      title: `${shoppingItem.nomeServico}`,
       buttons:[
         {
-          text: 'Edit',
+          text: 'Editar',
           handler:() => {
             // sen the user to the EditShopping Item page-shopping-list
             this.navCtrl.push(EditShoppingItemPage, { shoppingItemId: shoppingItem.$key });
@@ -38,7 +39,7 @@ export class HomePage {
           }
         },
         {
-          text: 'Delete',
+          text: 'Excluir',
           role: 'destructive',
           handler: () => {
             this.shoppingListRef$.remove(shoppingItem.$key);
@@ -46,7 +47,7 @@ export class HomePage {
           }
         },
         {
-          text:'Cancel',
+          text:'Cancelar',
           role: 'calcel',
           handler:() => {
             console.log("The user has selected the cancel button")
@@ -62,7 +63,7 @@ export class HomePage {
     this.afAuth.authState.subscribe(data =>{
       if (data && data.email && data.uid){
       this.toast.create({
-          message: `Welcome to APP, ${data.email}`,
+          message: `Bem Vindo ao FastJob, ${data.email}`,
           duration: 3000
         }).present();
   }
@@ -73,6 +74,9 @@ export class HomePage {
       }).present();
   }
 });
+}
+openMenu(){
+  this.menuCtrl.open();
 }
 navigateToAddShoppingPage(){
   this.navCtrl.push(AddShoppingPage)

@@ -90,11 +90,11 @@ var LoginPage = (function () {
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"/home/victor/dev/fastJob/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color = "primary">\n    <ion-title>Login</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item>\n      <ion-label>Email : </ion-label>\n      <ion-input type = "text" [(ngModel)]="user.email"> </ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label> Senha :  </ion-label>\n    <ion-input type = "password" [(ngModel)]="user.password"> </ion-input>\n  </ion-item>\n\n  <button ion-button (click)="login(user)"> Login </button>\n  <button ion-button color="light" (click)="register()">Register </button>\n\n</ion-content>\n'/*ion-inline-end:"/home/victor/dev/fastJob/src/pages/login/login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"C:\Users\Victor\Desktop\dev\fastJob\src\pages\login\login.html"*/'<!--\n\n  Generated template for the LoginPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color = "primary">\n\n    <ion-title>Login</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <ion-item>\n\n      <ion-label>Email : </ion-label>\n\n      <ion-input type = "text" [(ngModel)]="user.email"> </ion-input>\n\n  </ion-item>\n\n\n\n  <ion-item>\n\n    <ion-label> Senha :  </ion-label>\n\n    <ion-input type = "password" [(ngModel)]="user.password"> </ion-input>\n\n  </ion-item>\n\n\n\n  <button ion-button (click)="login(user)"> Login </button>\n\n  <button ion-button color="light" (click)="register()">Register </button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\Victor\Desktop\dev\fastJob\src\pages\login\login.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["a" /* AngularFireAuth */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], LoginPage);
 
 //# sourceMappingURL=login.js.map

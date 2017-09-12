@@ -25,8 +25,9 @@ export class AddShoppingPage {
 
   addShoppingItem(shoppingItem: ShoppingItem){
       this.shoppingItemRef$.push({
-        itemName: this.shoppingItem.itemName,
-        itemNumber: Number(this.shoppingItem.itemNumber)
+        nomeServico: this.shoppingItem.nomeServico,
+        valorServico: Number(this.shoppingItem.valorServico),
+        dataServico: this.shoppingItem.dataServico
 
       });
       this.navCtrl.pop();

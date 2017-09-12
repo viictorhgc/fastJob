@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color= "primary">
-    <ion-title>{{shoppingItem.itemName}}</ion-title>
+    <ion-title>{{shoppingItem.nomeServico}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -16,15 +16,19 @@
 <ion-content padding>
 
     <ion-item>
-      <ion-label floating> Item Name </ion-label>
-      <ion-input type="text" [(ngModel)] = "shoppingItem.itemName"> </ion-input>
+      <ion-label floating> Nome do serviço : </ion-label>
+      <ion-input type="text" [(ngModel)] = "shoppingItem.nomeServico"> </ion-input>
     </ion-item>
 
       <ion-item>
-        <ion-label floating> Number </ion-label>
-        <ion-input type="number"[(ngModel)] = "shoppingItem.itemNumber"> </ion-input>
+        <ion-label floating> Valor : </ion-label>
+        <ion-input type="number"[(ngModel)] = "shoppingItem.valorServico"> </ion-input>
       </ion-item>
 
+      <ion-item>
+        <ion-label floating> Data : </ion-label>
+        <ion-input type="Date"[(ngModel)] = "shoppingItem.dataServico"> </ion-input>
+      </ion-item>
       <button ion-button block (click) = "editShoppingItem(shoppingItem)"> Edit Item </button>
 
 </ion-content>

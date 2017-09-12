@@ -27,7 +27,7 @@ export class ShoppingListPage {
 
   selectShoppingItem(shoppingItem: ShoppingItem){
     this.actionSheetCtrl.create({
-      title: `${shoppingItem.itemName}`,
+      title: `${shoppingItem.nomeServico}`,
       buttons:[
         {
           text: 'Edit',
